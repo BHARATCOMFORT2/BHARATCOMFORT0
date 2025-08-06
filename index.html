@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BharatComfort - Feel All The Comforts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Welcome to BharatComfort</h1>
+    <p>Your one-stop platform to discover the best hotels and restaurants across India.</p>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Feel All the Comforts with BharatComfort</h2>
+    <p>Explore the best stays and dining experiences city by city.</p>
+  </section>
+
+  <section class="search">
+    <input type="text" id="searchInput" onkeyup="filterLocations()" placeholder="Search for a city..." />
+  </section>
+
+  <section class="locations" id="locations">
+    <h3>Popular Cities</h3>
+    <ul id="locationList">
+      <li>VARANASI</li>
+      <li>GHAZIPUR</li>
+      <li>PATNA</li>
+      <li>MARINE DRIVE</li>
+      <li>RAJENDRA NAGAR</li>
+      <li>LUCKNOW</li>
+      <li>DELHI</li>
+      <li>NEW DELHI</li>
+      <li>NOIDA</li>
+      <li>GREATOR NOIDA</li>
+      <li>PUNJAB</li>
+      <li>HARYANA</li>
+      <li>GUJRAT</li>
+      <li>AHMEDABAD</li>
+      <li>MAUNATH</li>
+      <li>BALLIA</li>
+      <li>GORAKHPUR</li>
+      <li>BETTIAH</li>
+      <li>PRAYAGRAJ</li>
+      <li>DEORIA</li>
+      <li>GONDA</li>
+      <li>MATHURA</li>
+      <li>VRINDAVAN</li>
+      <li>GOA</li>
+      <li>SASARAM</li>
+      <li>GAYA</li>
+      <li>
+        Other City:
+        <input type="text" placeholder="Enter city name" />
+      </li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at: <a href="mailto:shrrajbhar12340@gmail.com">shrrajbhar12340@gmail.com</a></p>
+    <p>&copy; 2025 BharatComfort</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
