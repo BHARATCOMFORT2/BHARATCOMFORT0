@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BharatComfort - Feel All The Comforts</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #1d3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .hero {
+      background: #a8dadc;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .btn {
+      background: #457b9d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      flex: 1 1 calc(50% - 40px);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .location-item {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    #location-search {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    #other-city-form {
+      margin-top: 20px;
+      display: none;
+    }
+    #other-city-form input {
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    #other-city-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #457b9d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("location-search");
+      const locationItems = document.querySelectorAll(".location-item");
+      const otherCityForm = document.getElementById("other-city-form");
+      const otherCityInput = document.getElementById("other-city-input");
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = this.value.toLowerCase();
+        let found = false;
+
+        locationItems.forEach(function (item) {
+          const text = item.textContent.toLowerCase();
+          const match = text.includes(searchTerm);
+          item.style.display = match ? "block" : "none";
+          if (match) found = true;
+        });
+
+        otherCityForm.style.display = found || !searchTerm ? "none" : "block";
+      });
+
+      document.getElementById("other-city-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const cityName = otherCityInput.value.trim();
+        if (cityName) {
+          alert(`Thank you! We will try to add listings for ${cityName}.`);
+          otherCityInput.value = "";
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>BharatComfort</h1>
+      <p>Feel All The Comforts</p>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#hotels">Find Hotels</a></li>
+          <li><a href="#restaurants">Find Restaurants</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#partners">Partner With Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Discover Comfort in Every Stay & Meal</h2>
+      <p>Explore top hotels and restaurants across India with BharatComfort</p>
+      <a href="#hotels" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Hotels Section -->
+  <section id="hotels">
+    <div class="container">
+      <h2>Featured Hotels</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Hotel Sunrise</h3>
+          <p>Patna, Bihar</p>
+        </div>
+        <div class="card">
+          <h3>Comfort Inn</h3>
+          <p>Delhi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurants Section -->
+  <section id="restaurants">
+    <div class="container">
+      <h2>Top Restaurants</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Spice Villa</h3>
+          <p>Varanasi, UP</p>
+        </div>
+        <div class="card">
+          <h3>The Royal Tandoor</h3>
+          <p>Kolkata, WB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Listings Section -->
+  <section id="locations">
+    <div class="container">
+      <h2>Explore by Location</h2>
+      <input type="text" id="location-search" placeholder="Search for a city..." />
+      <div class="locations-grid">
+        <div class="location-item">Varanasi</div>
+        <div class="location-item">Ghazipur</div>
+        <div class="location-item">Patna</div>
+        <div class="location-item">Marine Drive</div>
+        <div class="location-item">Rajendra Nagar</div>
+        <div class="location-item">Lucknow</div>
+        <div class="location-item">Delhi</div>
+        <div class="location-item">New Delhi</div>
+        <div class="location-item">Noida</div>
+        <div class="location-item">Greater Noida</div>
+        <div class="location-item">Punjab</div>
+        <div class="location-item">Haryana</div>
+        <div class="location-item">Gujrat</div>
+        <div class="location-item">Ahmedabad</div>
+        <div class="location-item">Maunath</div>
+        <div class="location-item">Ballia</div>
+        <div class="location-item">Gorakhpur</div>
+        <div class="location-item">Bettiah</div>
+        <div class="location-item">Prayagraj</div>
+        <div class="location-item">Deoria</div>
+        <div class="location-item">Gonda</div>
+        <div class="location-item">Mathura</div>
+        <div class="location-item">Vrindavan</div>
+        <div class="location-item">Goa</div>
+        <div class="location-item">Sasaram</div>
+        <div class="location-item">Gaya</div>
+        <div class="location-item">All Indian Cities</div>
+      </div>
+      <form id="other-city-form">
+        <input type="text" id="other-city-input" placeholder="City not listed? Enter your city name here..." required />
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Partner With Us -->
+  <section id="partners">
+    <div class="container">
+      <h2>Partner With BharatComfort</h2>
+      <p>List your hotel or restaurant with us and reach thousands of potential customers daily.</p>
+      <a href="#contact" class="btn">Submit Your Listing</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Instagram Reels & Promotions</li>
+        <li>Hotel/Restaurant Photography</li>
+        <li>Custom Listing Pages</li>
+        <li>Social Media Marketing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About BharatComfort</h2>
+      <p>BharatComfort is dedicated to promoting local hotels and restaurants across India. We help them grow by showcasing their unique experiences and offerings through modern marketing strategies.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Phone: 9277168528</p>
+      <p>Email: shrrajbhar12340@gmail.com</p>
+      <p>WhatsApp: <a href="https://wa.me/919277168528">Chat Now</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BharatComfort. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
