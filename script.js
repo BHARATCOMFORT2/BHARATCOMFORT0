@@ -13,3 +13,29 @@ function filterLocations() {
     }
   }
 }
+// script.js
+
+fetch('listings.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('location-listings');
+
+    for (const city in data) {
+      const cityBox = document.createElement('div');
+      cityBox.className = 'location';
+
+      const heading = document.createElement('h3');
+      heading.textContent = city;
+
+      const ul = document.createElement('ul');
+      data[city].forEach(place => {
+        const li = document.createElement('li');
+        li.textContent = place;
+        ul.appendChild(li);
+      });
+
+      cityBox.appendChild(heading);
+      cityBox.appendChild(ul);
+      container.appendChild(cityBox);
+    }
+  });
