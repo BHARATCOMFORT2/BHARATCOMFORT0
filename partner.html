@@ -1,0 +1,64 @@
+<!-- partner.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Partner With Us - BharatComfort</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    input, label {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Partner With Us</h2>
+
+  <form action="mailto:shrrajbhar12340@gmail.com" method="POST" enctype="text/plain">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Business Name:</label>
+    <input type="text" name="business" required>
+
+    <label>Designation:</label>
+    <input type="text" name="designation">
+
+    <label>Business Address:</label>
+    <input type="text" name="address">
+
+    <label>Contact Number:</label>
+    <input type="text" name="contact" required>
+
+    <label>Reference (if any):</label>
+    <input type="text" name="reference">
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
