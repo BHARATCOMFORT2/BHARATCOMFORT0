@@ -1,4 +1,3 @@
-<!-- locations.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,10 +44,49 @@
   <h2>Explore Listings by Location</h2>
 
   <div id="location-listings">
-    <!-- Listings will load here -->
+    <!-- Listings will be generated here -->
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const listings = {
+      "Patna": [
+        "Hotel Gargee Grand",
+        "Biryani Mahal",
+        "The Panache"
+      ],
+      "Mumbai": [
+        "Taj Mahal Palace",
+        "Indigo Deli",
+        "Sea View Inn"
+      ],
+      "Delhi": [
+        "Hotel Leela Palace",
+        "Karim’s",
+        "Connaught Royale"
+      ]
+    };
+
+    const container = document.getElementById('location-listings');
+
+    for (const city in listings) {
+      const cityBox = document.createElement('div');
+      cityBox.className = 'location';
+
+      const heading = document.createElement('h3');
+      heading.textContent = city;
+
+      const ul = document.createElement('ul');
+      listings[city].forEach(place => {
+        const li = document.createElement('li');
+        li.textContent = place;
+        ul.appendChild(li);
+      });
+
+      cityBox.appendChild(heading);
+      cityBox.appendChild(ul);
+      container.appendChild(cityBox);
+    }
+  </script>
 
 </body>
 </html>
