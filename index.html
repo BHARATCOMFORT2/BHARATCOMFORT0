@@ -1,152 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BharatComfort - Feel All The Comforts</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatComfort - Feel All the Comforts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
-    <h1>Welcome to BharatComfort</h1>
-    <p>Your one-stop platform to discover the best hotels and restaurants across India.</p>
-  </header>
+    <header>
+        <h1>BharatComfort</h1>
+        <p>Feel all the comforts with BharatComfort</p>
+    </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#locations">Locations</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <a href="contact.html" target="_blank">Contact Us</a>
-      <a href="partner.html" target="_blank">Partner With Us</a>
-    </ul>
-  </nav>
+    <main>
+        <h2>Select a City</h2>
+        <div id="city-list" class="grid"></div>
+    </main>
 
-  <section class="hero" id="home">
-    <h2>Feel All the Comforts with BharatComfort</h2>
-    <p>Explore the best stays and dining experiences city by city.</p>
-  </section>
+    <script>
+        const cities = [
+            "Delhi", "Mumbai", "Kolkata", "Chennai", "Bengaluru", "Hyderabad", "Ahmedabad", "Pune", "Jaipur", "Lucknow",
+            "Patna", "Bhopal", "Surat", "Kanpur", "Nagpur", "Indore", "Vadodara", "Chandigarh", "Guwahati", "Ranchi",
+            "Coimbatore", "Vijayawada", "Mysuru", "Agra", "Varanasi", "Jodhpur", "Raipur", "Dehradun", "Amritsar", "Aurangabad",
+            "Udaipur", "Rajkot", "Kozhikode", "Thrissur", "Kochi", "Madurai", "Tiruchirappalli", "Salem", "Tirunelveli", "Erode",
+            "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Meerut", "Aligarh", "Moradabad", "Bareilly", "Gorakhpur", "Prayagraj",
+            "Shimla", "Manali", "Gangtok", "Shillong", "Aizawl", "Itanagar", "Kohima", "Imphal", "Agartala", "Port Blair",
+            "Puducherry", "Panaji", "Margao", "Vasco da Gama", "Belagavi", "Hubballi", "Dharwad", "Gulbarga", "Bellary", "Hospet",
+            "Jabalpur", "Gwalior", "Satna", "Rewa", "Bilaspur", "Durg", "Korba", "Bhilai", "Silchar", "Dibrugarh", "Tezpur",
+            "Jorhat", "Dimapur", "Chhapra", "Begusarai", "Darbhanga", "Munger", "Purnia", "Buxar", "Siwan", "Motihari", "Sasaram",
+            "Bhagalpur", "Katihar", "Arrah", "Hajipur", "Samastipur", "Muzaffarpur", "Nalanda", "Gaya", "Jehanabad", "Aurangabad (Bihar)"
+        ];
 
-  <section class="search">
-    <input type="text" id="searchInput" onkeyup="filterLocations()" placeholder="Search for a city..." />
-  </section>
-
-  <section class="locations" id="locations">
-    <h3>Popular Cities</h3>
-    <ul id="locationList">
-      <li>VARANASI</li>
-      <li>GHAZIPUR</li>
-      <li>PATNA</li>
-      <li>MARINE DRIVE</li>
-      <li>RAJENDRA NAGAR</li>
-      <li>LUCKNOW</li>
-      <li>DELHI</li>
-      <li>NEW DELHI</li>
-      <li>NOIDA</li>
-      <li>GREATOR NOIDA</li>
-      <li>PUNJAB</li>
-      <li>HARYANA</li>
-      <li>GUJRAT</li>
-      <li>AHMEDABAD</li>
-      <li>MAUNATH</li>
-      <li>BALLIA</li>
-      <li>GORAKHPUR</li>
-      <li>BETTIAH</li>
-      <li>PRAYAGRAJ</li>
-      <li>DEORIA</li>
-      <li>GONDA</li>
-      <li>MATHURA</li>
-      <li>VRINDAVAN</li>
-      <li>GOA</li>
-      <li>SASARAM</li>
-      <li>GAYA</li>
-      <li>
-        Other City:
-        <input type="text" placeholder="Enter city name" />
-      </li>
-    </ul>
- <!-- Partner With Us Section -->
-<section id="partner" style="padding: 60px 20px; background: #f4f4f4; font-family: Arial, sans-serif;">
-  <div style="max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
-    <h2 style="text-align: center;">🤝 Partner With BharatComfort</h2>
-    <p style="text-align: center; color: #555;">Grow your bookings and visibility by joining the BharatComfort network. Fill the form below and we'll reach out to you!</p>
-
-    <form id="partnerForm" action="https://formsubmit.co/ajax/shrrajbhar12340@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      
-      <label>Name</label>
-      <input type="text" name="Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-
-      <label>Business Name</label>
-      <input type="text" name="Business Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-
-      <label>Designation</label>
-      <input type="text" name="Designation" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-
-      <label>Contact Number</label>
-      <input type="tel" name="Contact Number" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-
-      <label>Business Address</label>
-      <input type="text" name="Business Address" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-
-      <label>Reference (optional)</label>
-      <input type="text" name="Reference" style="width:100%; padding:10px; margin-bottom:20px; border-radius:5px; border:1px solid #ccc;">
-
-      <div style="text-align: center;">
-        <button type="submit" style="background-color:#007bff; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer;">Submit</button>
-      </div>
-    </form>
-
-    <div id="thankYouMessage" style="display:none; margin-top:20px; text-align:center; color:#28a745; font-weight:bold;">
-      ✅ Thank you for submitting your details! We will contact you shortly.
-    </div>
-  </div>
-</section>
-
-<!-- JavaScript to handle form submission -->
-<script>
-document.getElementById("partnerForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Stop default form submission
-  const form = e.target;
-  const data = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById("thankYouMessage").style.display = "block";
-    } else {
-      alert("There was a problem. Please try again.");
-    }
-  }).catch(error => {
-    alert("Error: " + error);
-  });
-});
-</script>
-
-<!-- Smooth Scroll Script -->
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-</script>
-  </section>
-
-
-  <footer id="contact">
-    <p>Contact us at: <a href="mailto:shrrajbhar12340@gmail.com">shrrajbhar12340@gmail.com</a></p>
-    <p>&copy; 2025 BharatComfort</p>
-  </footer>
-
-  <script src="script.js"></script>
+        const container = document.getElementById('city-list');
+        cities.forEach(city => {
+            const div = document.createElement('div');
+            div.classList.add('city-card');
+            div.innerHTML = `<a href="city.html?name=${encodeURIComponent(city)}">${city}</a>`;
+            container.appendChild(div);
+        });
+    </script>
 </body>
 </html>
