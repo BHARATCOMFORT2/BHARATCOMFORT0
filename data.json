@@ -1,0 +1,99 @@
+{
+  "Delhi": [
+    {"name": "Royal Palace Hotel", "address": "Connaught Place, Delhi", "price": 3200},
+    {"name": "The Grand Delhi", "address": "Janpath, Delhi", "price": 2800},
+    {"name": "City Inn", "address": "Karol Bagh, Delhi", "price": 2500},
+    {"name": "Heritage Residency", "address": "Paharganj, Delhi", "price": 2700},
+    {"name": "Lotus Hotel", "address": "Dwarka, Delhi", "price": 2200},
+    {"name": "Metro Comforts", "address": "Saket, Delhi", "price": 3000},
+    {"name": "New Delhi Suites", "address": "Chanakyapuri, Delhi", "price": 3500},
+    {"name": "Cityview Inn", "address": "Rohini, Delhi", "price": 2100},
+    {"name": "Majestic Stay", "address": "Lajpat Nagar, Delhi", "price": 2900},
+    {"name": "Sunrise Hotel", "address": "Nehru Place, Delhi", "price": 2600}
+  ],
+  "Mumbai": [
+    {"name": "Sea Breeze Hotel", "address": "Marine Drive, Mumbai", "price": 4000},
+    {"name": "Gateway Residency", "address": "Colaba, Mumbai", "price": 3800},
+    {"name": "Ocean View Inn", "address": "Juhu, Mumbai", "price": 3600},
+    {"name": "City Lights Hotel", "address": "Andheri West, Mumbai", "price": 3200},
+    {"name": "Bollywood Suites", "address": "Versova, Mumbai", "price": 3500},
+    {"name": "Bayfront Residency", "address": "Bandra, Mumbai", "price": 3900},
+    {"name": "Heritage Stay", "address": "Fort, Mumbai", "price": 3000},
+    {"name": "Downtown Hotel", "address": "Dadar, Mumbai", "price": 2800},
+    {"name": "Sunset Inn", "address": "Powai, Mumbai", "price": 3400},
+    {"name": "City Palace Hotel", "address": "Malad, Mumbai", "price": 3100}
+  ],
+  "Kolkata": [
+    {"name": "Victoria Hotel", "address": "Park Street, Kolkata", "price": 2700},
+    {"name": "Riverside Residency", "address": "Howrah, Kolkata", "price": 2300},
+    {"name": "City Center Inn", "address": "Salt Lake, Kolkata", "price": 2500},
+    {"name": "Heritage Palace", "address": "Esplanade, Kolkata", "price": 2900},
+    {"name": "Grand East Hotel", "address": "Ballygunge, Kolkata", "price": 2800},
+    {"name": "Metropolitan Stay", "address": "Tollygunge, Kolkata", "price": 2200},
+    {"name": "Lakeview Inn", "address": "Rabindra Sarobar, Kolkata", "price": 2600},
+    {"name": "Sunshine Hotel", "address": "Behala, Kolkata", "price": 2400},
+    {"name": "City Lights Hotel", "address": "Jadavpur, Kolkata", "price": 2700},
+    {"name": "Golden Residency", "address": "New Town, Kolkata", "price": 3000}
+  ],
+  "Chennai": [
+    {"name": "Marina Bay Hotel", "address": "Marina Beach, Chennai", "price": 3100},
+    {"name": "City View Residency", "address": "T Nagar, Chennai", "price": 2900},
+    {"name": "Southern Comfort Inn", "address": "Adyar, Chennai", "price": 2700},
+    {"name": "Heritage Palace", "address": "Mylapore, Chennai", "price": 2800},
+    {"name": "Grand Chennai Hotel", "address": "Anna Nagar, Chennai", "price": 3000},
+    {"name": "Sunset Residency", "address": "Velachery, Chennai", "price": 2600},
+    {"name": "Metro Stay", "address": "Guindy, Chennai", "price": 2500},
+    {"name": "Bayview Hotel", "address": "Egmore, Chennai", "price": 2700},
+    {"name": "City Lights Inn", "address": "Chromepet, Chennai", "price": 2300},
+    {"name": "Lotus Residency", "address": "Besant Nagar, Chennai", "price": 2800}
+  ],
+  "Bengaluru": [
+    {"name": "Silicon Stay", "address": "MG Road, Bengaluru", "price": 3300},
+    {"name": "Garden City Inn", "address": "Indiranagar, Bengaluru", "price": 3100},
+    {"name": "Tech Park Residency", "address": "Whitefield, Bengaluru", "price": 2900},
+    {"name": "City Palace Hotel", "address": "Koramangala, Bengaluru", "price": 3200},
+    {"name": "Sunshine Inn", "address": "Jayanagar, Bengaluru", "price": 2800},
+    {"name": "Royal Residency", "address": "Electronic City, Bengaluru", "price": 3000},
+    {"name": "Metro View Hotel", "address": "Hebbal, Bengaluru", "price": 2700},
+    {"name": "Lotus Stay", "address": "Malleshwaram, Bengaluru", "price": 2600},
+    {"name": "Heritage Inn", "address": "Basavanagudi, Bengaluru", "price": 2800},
+    {"name": "City Lights Hotel", "address": "Banashankari, Bengaluru", "price": 2900}
+  ],
+  "Hyderabad": [
+    {"name": "Pearl City Hotel", "address": "Banjara Hills, Hyderabad", "price": 3400},
+    {"name": "Charminar Residency", "address": "Old City, Hyderabad", "price": 2900},
+    {"name": "Tech Hub Inn", "address": "Hitech City, Hyderabad", "price": 3200},
+    {"name": "Royal Residency", "address": "Gachibowli, Hyderabad", "price": 3100},
+    {"name": "Sunset Hotel", "address": "Begumpet, Hyderabad", "price": 2800},
+    {"name": "City View Inn", "address": "Secunderabad, Hyderabad", "price": 2700},
+    {"name": "Metro Comforts", "address": "Jubilee Hills, Hyderabad", "price": 3000},
+    {"name": "Heritage Stay", "address": "Koti, Hyderabad", "price": 2600},
+    {"name": "Grand Palace Hotel", "address": "Ameerpet, Hyderabad", "price": 2900},
+    {"name": "Lotus Residency", "address": "Mehdipatnam, Hyderabad", "price": 2500}
+  ],
+  "Ahmedabad": [
+    {"name": "Sabarmati Hotel", "address": "Ellis Bridge, Ahmedabad", "price": 2500},
+    {"name": "Heritage Residency", "address": "Paldi, Ahmedabad", "price": 2200},
+    {"name": "City Lights Inn", "address": "Navrangpura, Ahmedabad", "price": 2300},
+    {"name": "Grand View Hotel", "address": "Satellite, Ahmedabad", "price": 2600},
+    {"name": "Lotus Stay", "address": "Maninagar, Ahmedabad", "price": 2100},
+    {"name": "Sunshine Hotel", "address": "Vastrapur, Ahmedabad", "price": 2400},
+    {"name": "Metro Comfort Inn", "address": "Gota, Ahmedabad", "price": 2200},
+    {"name": "Royal Residency", "address": "Bopal, Ahmedabad", "price": 2500},
+    {"name": "City Palace Hotel", "address": "Nikol, Ahmedabad", "price": 2300},
+    {"name": "Heritage Inn", "address": "Gandhinagar, Ahmedabad", "price": 2600}
+  ],
+  "Pune": [
+    {"name": "Shivaji Inn", "address": "Shivaji Nagar, Pune", "price": 2800},
+    {"name": "City View Hotel", "address": "Koregaon Park, Pune", "price": 3000},
+    {"name": "Grand Residency", "address": "Viman Nagar, Pune", "price": 2900},
+    {"name": "Lotus Stay", "address": "Baner, Pune", "price": 2700},
+    {"name": "Sunshine Inn", "address": "Hadapsar, Pune", "price": 2500},
+    {"name": "Metro Comforts", "address": "Kalyani Nagar, Pune", "price": 2800},
+    {"name": "Royal Residency", "address": "Hinjawadi, Pune", "price": 3200},
+    {"name": "City Lights Hotel", "address": "Camp, Pune", "price": 2600},
+    {"name": "Heritage Inn", "address": "Vishrantwadi, Pune", "price": 2400},
+    {"name": "Grand Palace Hotel", "address": "Wakad, Pune", "price": 3000}
+  ]
+  // Add remaining 90 cities similarly ...
+}
