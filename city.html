@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Listings - BharatComfort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="city-name"></h1>
+        <a href="index.html" class="back-link">← Back to Cities</a>
+    </header>
+
+    <main>
+        <div id="listings" class="grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const city = urlParams.get("name");
+        document.getElementById("city-name").textContent = city;
+
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => {
+                const cityListings = data[city] || [];
+                const container = document.getElementById('listings');
+
+                if (cityListings.length === 0) {
+                    container.innerHTML = "<p>No listings found for this city.</p>";
+                } else {
+                    cityListings.forEach(listing => {
+                        const div = document.createElement('div');
+                        div.classList.add('listing-card');
+                        div.innerHTML = `
+                            <h3>${listing.name}</h3>
+                            <p>${listing.address}</p>
+                            <p>Price per night: ₹${listing.price}</p>
+                            <a href="booking.html?city=${encodeURIComponent(city)}&hotel=${encodeURIComponent(listing.name)}" class="btn">Book Now</a>
+                        `;
+                        container.appendChild(div);
+                    });
+                }
+            });
+    </script>
+</body>
+</html>
