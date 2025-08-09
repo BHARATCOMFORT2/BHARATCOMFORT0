@@ -229,3 +229,73 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* ===== BharatComfort image popup ===== */
+.bc-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.bc-popup[aria-hidden="false"] { display: flex; }
+
+.bc-popup-inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.bc-popup-close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.bc-popup-slide {
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.bc-popup img#bc-popup-image {
+  max-width: 100%;
+  max-height: 75vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.bc-nav {
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 0 8px;
+  user-select: none;
+}
+
+.bc-popup-footer {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+@media (max-width: 640px) {
+  .bc-nav { font-size: 1.4rem; padding: 8px 10px; }
+  .bc-popup img#bc-popup-image { max-height: 60vh; }
+}
