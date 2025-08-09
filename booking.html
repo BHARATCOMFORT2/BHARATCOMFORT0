@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - BharatComfort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Stay</h1>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <main>
+        <div class="booking-form">
+            <form id="bookingForm">
+                <label>City:</label>
+                <input type="text" id="city" name="city" readonly>
+
+                <label>Hotel:</label>
+                <input type="text" id="hotel" name="hotel" readonly>
+
+                <label>Your Name:</label>
+                <input type="text" name="name" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Phone:</label>
+                <input type="tel" name="phone" required>
+
+                <label>Check-in Date:</label>
+                <input type="date" name="checkin" required>
+
+                <label>Check-out Date:</label>
+                <input type="date" name="checkout" required>
+
+                <label>Room Type:</label>
+                <select name="room" required>
+                    <option value="Standard">Standard - ₹2000/night</option>
+                    <option value="Deluxe">Deluxe - ₹3500/night</option>
+                    <option value="Suite">Suite - ₹5000/night</option>
+                </select>
+
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+            <div id="booking-message"></div>
+        </div>
+    </main>
+
+    <script>
+        // Prefill city and hotel from URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("city").value = params.get("city");
+        document.getElementById("hotel").value = params.get("hotel");
+
+        document.getElementById("bookingForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Normally here you'd send to a backend or Google Sheets
+            document.getElementById("booking-message").innerHTML = `
+                <p style="color:green;font-weight:bold;">
+                    ✅ Booking Confirmed! A confirmation email will be sent to you.
+                </p>
+            `;
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
