@@ -95,5 +95,4 @@
     {"name": "Heritage Inn", "address": "Vishrantwadi, Pune", "price": 2400},
     {"name": "Grand Palace Hotel", "address": "Wakad, Pune", "price": 3000}
   ]
-  // Add remaining 90 cities similarly ...
 }
