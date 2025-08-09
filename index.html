@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BharatComfort - Feel All The Comforts</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="contact"chref="contact.html"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="main-header">
@@ -17,6 +16,7 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#locations">Locations</a></li>
+      <li><a href="#partners">Partner With Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -52,9 +52,41 @@
             container.appendChild(div);
         });
     </script>
-  <footer id="contact">
-    <p>Contact us at: <a href="mailto:shrrajbhar12340@gmail.com">shrrajbhar12340@gmail.com</a></p>
-    <p>&copy; 2025 BharatComfort</p>
+<section id="partners">
+    <h2>Partner With BharatComfort</h2>
+    <p>List your hotel or restaurant with us and reach thousands of potential customers daily.</p>
+    <form id="partner-form">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="businessName">Business Name:</label><br />
+      <input type="text" id="businessName" name="businessName" required /><br />
+
+      <label for="designation">Designation:</label><br />
+      <input type="text" id="designation" name="designation" /><br />
+
+      <label for="contactNumber">Contact Number:</label><br />
+      <input type="tel" id="contactNumber" name="contactNumber" required /><br />
+
+      <label for="reference">Reference (Optional):</label><br />
+      <input type="text" id="reference" name="reference" /><br />
+
+      <label for="address">Address:</label><br />
+      <textarea id="address" name="address" rows="3" required></textarea><br />
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="partner-message"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: shrrajbhar12340@gmail.com</p>
+    <p>Phone: 9277168528</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BharatComfort. All rights reserved.</p>
   </footer>
 </body>
 </html>
