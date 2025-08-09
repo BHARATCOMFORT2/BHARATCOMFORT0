@@ -13,5 +13,11 @@
     "Hotel Leela Palace",
     "Karim’s",
     "Connaught Royale"
+<div class="listing-card">
+  <h3>Hotel Paradise</h3>
+  <p>Patna — Near MG Road</p>
+  <button class="view-images" data-folder-id="1E8DInk48Wz1dCC6R8fcUEBibnEEzGgwy">View Images</button>
+</div>
+
   ]
 }
